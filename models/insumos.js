@@ -52,7 +52,6 @@ const InsumoShema=({
 
     estado: {
         type: String,
-        enum: ['activo', 'inactivo'],
         default: 'activo', // Puedes establecer un valor predeterminado si lo deseas
     },
     

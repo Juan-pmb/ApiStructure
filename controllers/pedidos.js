@@ -35,10 +35,10 @@ const postPedidos = async(req, res) => {
 
 
 const putPedidos = async(req, res) =>{
-    const {numPedido,nombreCliente,fechaPedido,totalPago,estado,formaPago}=req.body //desestructurar
+    const {numPedido,nombreCliente,fechaPedido,totalPago,estado,formaPago, precioDolar}=req.body //desestructurar
 
 try{
-        const pedidos = await Pedidos.findOneAndUpdate({numPedido:numPedido},{nombreCliente:nombreCliente,fechaPedido:fechaPedido,totalPago:totalPago,estado:estado,formaPago:formaPago})//las primeras llaves son el valor por el cual voy a hacer la modificacion el segundo hace referencia a lo que el usuario envio
+        const pedidos = await Pedidos.findOneAndUpdate({numPedido:numPedido},{nombreCliente:nombreCliente,fechaPedido:fechaPedido,totalPago:totalPago,estado:estado,formaPago:formaPago, precioDolar:precioDolar})//las primeras llaves son el valor por el cual voy a hacer la modificacion el segundo hace referencia a lo que el usuario envio
        
         mensaje = 'actualizacion exitosa'
         

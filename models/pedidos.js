@@ -25,6 +25,10 @@ const PedidoShema=({
     formaPago:{
         type: String,
         default: 'bancolombia', // Puedes establecer un valor predeterminado si lo deseas
+    },
+    precioDolar:{
+        type: Number,
+        required: true // Puedes establecer un valor predeterminado si lo deseas
     }
 
 })
